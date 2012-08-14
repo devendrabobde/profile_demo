@@ -1,0 +1,41 @@
+<h1> Fill All The Details to Complete Your Profile </h1>
+
+
+<%= form_for [@user, @profile], :html => {:multipart => true} do |form| %>
+
+<label> Name :
+	<p> <%= form.text_field :name %> </p> 
+</label>
+<br>
+<label> City :
+	<p> <%= form.text_field :city%> </p>
+</label>
+
+<label> State :
+	<p> <%= form.text_field :state%> </p>
+</label>
+
+<label> Zip :
+	<p> <%= form.text_field :zip%> </p>
+</label>
+
+<label> Phone :
+	<p> <%= form.text_field :phone%> </p>
+</label>
+
+<label> Address :
+	<p> <%= form.text_area :address%> </p>
+</label>
+
+<label> Add Image :
+ <p> <%= form.file_field :image %> </p>
+</label>
+  
+<label> Image Url : 
+ <p> <%= form.label :remote_image_url, "or image URL" %><br />
+     <%= form.text_field :remote_image_url %>
+ </p>
+</label>
+<p> <%= form.submit %> </p>
+
+<% end %>

@@ -1,0 +1,15 @@
+<% current_user.profile.each do |profile| %>
+	<%= profile.name %> 
+	<%= profile.city %> 
+	<%= profile.state %> 
+	<%= profile.zip %> 
+	<%= profile.phone %> 
+	<%= profile.address %> 
+	<p>
+  <b>Image:</b>
+  
+  <%= image_tag profile.image_url(:thumb).to_s %>
+
+
+</p>
+<% end %>
